@@ -1,0 +1,102 @@
+/* =========================
+   DAFT PUNK FUTURE CSS 🤖
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --bg-dark: #050505;
+  --neon-blue: #00f6ff;
+  --neon-pink: #ff2bdc;
+  --neon-gold: #ffd700;
+  --glass: rgba(255, 255, 255, 0.08);
+  --blur: blur(12px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #111 0%, var(--bg-dark) 70%);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor principal */
+.daftpunk-card {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 246, 255, 0.15),
+    rgba(255, 43, 220, 0.15)
+  );
+  backdrop-filter: var(--blur);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  box-shadow:
+    0 0 20px var(--neon-blue),
+    0 0 40px rgba(255, 43, 220, 0.4);
+  animation: glow 4s infinite alternate;
+}
+
+/* Título */
+.daftpunk-title {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+/* Subtítulo */
+.daftpunk-sub {
+  font-size: 0.9rem;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+/* Botón futurista */
+.daftpunk-btn {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: white;
+  border: 2px solid var(--neon-gold);
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px var(--neon-gold);
+}
+
+.daftpunk-btn:hover {
+  background: var(--neon-gold);
+  color: black;
+  box-shadow:
+    0 0 20px var(--neon-gold),
+    0 0 40px var(--neon-gold);
+}
+
+/* Animación de glow */
+@keyframes glow {
+  from {
+    box-shadow:
+      0 0 15px var(--neon-blue),
+      0 0 30px rgba(255, 43, 220, 0.3);
+  }
+  to {
+    box-shadow:
+      0 0 30px var(--neon-pink),
+      0 0 60px rgba(0, 246, 255, 0.5);
+  }
+}
