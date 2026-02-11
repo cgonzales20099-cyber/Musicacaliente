@@ -1,19 +1,20 @@
+    let canço = new Audio("audio1.mp3");
+        let canço2 = new Audio("audio2.mp3")
+document.getElementById("musica").addEventListener ("click", function () {
 
-document.getElementById("musica").addEventListener ("click", function () {
-    let canço = new Audio("audio1.mp3")
     canço.play();
 })
 document.getElementById("musica2").addEventListener("click", function () {
-    let canço = new Audio("audio2.mp3")
-    canço.play();
+    
+    canço2.play();
 })
-document.getElementById("musica").addEventListener ("click", function () {
-    let canço = new Audio("audio1.mp3")
+document.getElementById("musica1p").addEventListener ("click", function () {
+
     canço.pause();
 })
-document.getElementById("musica2").addEventListener("click", function () {
-    let canço = new Audio("audio2.mp3")
-    canço.pause();
+document.getElementById("musica2p").addEventListener("click", function () {
+
+    canço2.pause();
 })
 
 
