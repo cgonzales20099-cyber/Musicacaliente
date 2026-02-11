@@ -1,6 +1,6 @@
 
 document.getElementById("musica").addEventListener ("click", function () {
-    let canço = new Audio("./musica/audio1.mp3")
+    let canço = new Audio("audio1.mp3")
     canço.play();
 })
 document.getElementById("musica2").addEventListener("click", function () {
