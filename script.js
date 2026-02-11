@@ -7,6 +7,14 @@ document.getElementById("musica2").addEventListener("click", function () {
     let canço = new Audio("audio2.mp3")
     canço.play();
 })
+document.getElementById("musica").addEventListener ("click", function () {
+    let canço = new Audio("audio1.mp3")
+    canço.pause();
+})
+document.getElementById("musica2").addEventListener("click", function () {
+    let canço = new Audio("audio2.mp3")
+    canço.pause();
+})
 
 
 document.addEventListener("keydown", function (e) {
@@ -16,15 +24,11 @@ document.addEventListener("keydown", function (e) {
     }
     if (e.key == "c") {
         let so2 = new Audio("audio1.mp3")
-        so2.pause();
+        so2.play();
     }
     if (e.key == "b") {
-        let so3 = new Audio("audio2.mp3")
+        let so3 = new Audio("audio1.mp3")
         so3.play();
-    }
-    if (e.key == "d") {
-        let so3 = new Audio("audio2.mp3")
-        so3.pause();
     }
 })
 
