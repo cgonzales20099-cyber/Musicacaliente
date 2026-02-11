@@ -1,5 +1,5 @@
 
-document.getElementById("musica").addEventListener("click", function () {
+document.getElementById("musica").addEventListener ("click", function () {
     let canço = new Audio("./musica/audio1.mp3")
     canço.play();
 })
