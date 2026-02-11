@@ -16,11 +16,15 @@ document.addEventListener("keydown", function (e) {
     }
     if (e.key == "c") {
         let so2 = new Audio("audio1.mp3")
-        so2.play();
+        so2.pause();
     }
     if (e.key == "b") {
-        let so3 = new Audio("audio1.mp3")
+        let so3 = new Audio("audio2.mp3")
         so3.play();
+    }
+    if (e.key == "d") {
+        let so3 = new Audio("audio2.mp3")
+        so3.pause();
     }
 })
 
