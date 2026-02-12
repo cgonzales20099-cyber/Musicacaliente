@@ -1,102 +1,82 @@
-/* =========================
-   DAFT PUNK FUTURE CSS 🤖
-   ========================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-:root {
-  --bg-dark: #050505;
-  --neon-blue: #00f6ff;
-  --neon-pink: #ff2bdc;
-  --neon-gold: #ffd700;
-  --glass: rgba(255, 255, 255, 0.08);
-  --blur: blur(12px);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Orbitron', sans-serif;
-}
-
 body {
-  background: radial-gradient(circle at top, #111 0%, var(--bg-dark) 70%);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Centrar verticalmente */
+    margin: 0;
+ } body {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/740/305/313/music-daft-punk-new-helmets-wallpaper-preview.jpg");
+
+    background-size: cover; /* Cubrir todo el fondo */
+    background-position: center; /* Centrar la imagen */
 }
 
-/* Contenedor principal */
-.daftpunk-card {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 246, 255, 0.15),
-    rgba(255, 43, 220, 0.15)
-  );
-  backdrop-filter: var(--blur);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 2.5rem 3rem;
-  text-align: center;
-  box-shadow:
-    0 0 20px var(--neon-blue),
-    0 0 40px rgba(255, 43, 220, 0.4);
-  animation: glow 4s infinite alternate;
+#titulo {
+    font-size: 60px; /* Tamaño grande para el título */
+    text-align: center;
+    text-transform: uppercase; /* Todo en mayúsculas */
+    letter-spacing: 5px; /* Espaciado entre letras */
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #d4af37, #c0c0c0); /* Degradado dorado y plateado */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(192, 192, 192, 0.7); /* Sombra brillante */
 }
 
-/* Título */
-.daftpunk-title {
-  font-size: 2.5rem;
-  letter-spacing: 4px;
-  background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
+#consola {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 0.8); /* Fondo oscuro y semi-transparente */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); /* Sombra para profundidad */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
 }
 
-/* Subtítulo */
-.daftpunk-sub {
-  font-size: 0.9rem;
-  color: #aaa;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+button {
+    background: linear-gradient(90deg, #d4af37, #c0c0c0); /* Degradado dorado y plateado */
+    border: none; /* Sin borde */
+    color: #ffffff; /* Texto blanco */
+    padding: 15px 40px; /* Relleno de botones */
+    margin: 10px; /* Espacio entre botones */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 22px; /* Tamaño de texto en botones */
+    cursor: pointer; /* Cursor de puntero */
+    transition: transform 0.2s, box-shadow 0.3s; /* Transiciones suaves */
+    position: relative;
+    overflow: hidden; /* Para el efecto de brillo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
 }
 
-/* Botón futurista */
-.daftpunk-btn {
-  padding: 0.8rem 2rem;
-  background: transparent;
-  color: white;
-  border: 2px solid var(--neon-gold);
-  border-radius: 50px;
-  cursor: pointer;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px var(--neon-gold);
+button:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada al pasar el mouse */
 }
 
-.daftpunk-btn:hover {
-  background: var(--neon-gold);
-  color: black;
-  box-shadow:
-    0 0 20px var(--neon-gold),
-    0 0 40px var(--neon-gold);
+button:active {
+    transform: translateY(2px); /* Efecto de disminución al hacer clic */
 }
 
-/* Animación de glow */
-@keyframes glow {
-  from {
-    box-shadow:
-      0 0 15px var(--neon-blue),
-      0 0 30px rgba(255, 43, 220, 0.3);
-  }
-  to {
-    box-shadow:
-      0 0 30px var(--neon-pink),
-      0 0 60px rgba(0, 246, 255, 0.5);
-  }
+/* Efecto adicional al hacer clic */
+button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Aumenta el tamaño para el efecto de brillo */
+    height: 300%; /* Aumenta el tamaño para el efecto de brillo */
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0) 70%); /* Efecto de brillo dorado */
+    transition: opacity 0.3s;
+    transform: translate(-50%, -50%) scale(0); /* Inicialmente oculto */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+button:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Muestra el brillo al pasar el mouse */
+    opacity: 1; /* Hace visible el brillo */
 }
