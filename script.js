@@ -26,10 +26,11 @@ document.getElementById("musica2p").addEventListener("click", function () {
 
     canço2.pause();
 })
+
 function reiniciarCanciones() {
     [canço, canço2, canço3].forEach(audio => {
-        audio.pause();       // Pausa la canción
-        audio.currentTime = 0; // Vuelve al inicio
+        audio.pause();       
+        audio.currentTime = 0; 
     });
     console.log("Canciones reiniciadas");
 }
