@@ -26,6 +26,21 @@ document.getElementById("musica2p").addEventListener("click", function () {
 
     canço2.pause();
 })
+function reiniciarCanciones() {
+    [canço, canço2, canço3].forEach(audio => {
+        audio.pause();       // Pausa la canción
+        audio.currentTime = 0; // Vuelve al inicio
+    });
+    console.log("Canciones reiniciadas");
+}
+
+
+document.addEventListener("keydown", function(event) {
+    
+    if (event.key === "r" ) {
+        reiniciarCanciones();
+    }
+});
 
 let so = new Audio("sound1.mp3");
 let so2 = new Audio("sound2.mp3");
